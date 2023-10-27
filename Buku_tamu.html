@@ -8,9 +8,9 @@
 
 </head>
 <body>
-     <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">MUH. SYARIF HIDAYATULLAH</a>
+        <a class="navbar-brand" href="index.html">MUH. SYARIF HIDAYATULLAH</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,17 +34,24 @@
                 <li class="nav-item">
                     <a class="nav-link" href="daftar barang.html">Daftar Barang</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="javascrip.html">Javascrip</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="javascript.html" id="navbarDropdown"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">JavaScript</a>
+                    <div class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item text-dark" href="menghitung_luas.html">Menghitung Luas</a>
+                        <a class="dropdown-item text-dark" href="memeriksa_angka.html">Periksa Angka</a>
+                        <a class="dropdown-item text-dark" href="kalkulator.html">Kalkulator</a>
+                    </div>
                 </li>
             </ul>
         </div>
     </nav>
 
 <!-- Jumbotron -->
-<div class="jumbotron">
-    <div class="text-center">
-   <h2>From Buku Tamu</h2>> 
+<div class="container mt-3">
+    <div class="content-container p-4">
+   <h2 class="text-center">From Buku Tamu</h2>
    <br>
 
    <from>
@@ -71,7 +78,7 @@
         </select><br><br>
         Pesan : <br>
         
-        <textarea type="pesan" size="111"> </textarea><br><br>
+        <textarea type="pesan" size="10000"> </textarea><br><br>
         <input type="submit" value="submit">
 
         </from>

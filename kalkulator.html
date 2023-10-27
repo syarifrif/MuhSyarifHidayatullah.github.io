@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-
-    <!-- Navbar -->
+       <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="index.html">MUH. SYARIF HIDAYATULLAH</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,39 +46,70 @@
             </ul>
         </div>
     </nav>
-
-    <!-- Jumbotron -->
-    <div class="jumbotron text-center" style="background-image:url(Universitas-Negeri-Makassar-Logo.png); background-size: contain;">         
-    </div>
     
-    <div class="text-center"><a class="btn btn-dark btn-lg" href="https://tik.ft.unm.ac.id/" role="button"><u>kunjungi</u></a>
-    </div>
+    <!-- content -->
+    <div class="container mt-3">
+        <div class="content-container p-4">
+            <h2 class="text-center">Kalkulator Sederhana</h2>
 
-    <!-- Konten Utama -->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Jurusan Teknik Informatika Dan Komputer</h2>
-                <p>Jurusan Teknik Informatika dan Komputer di bawah naungan Fakultas Teknik Universitas negeri Makassar atas dasar Permenristekdikti Nomor 15 Tahun 2019 tentang Organisasi Tata Kelola Universitas Negeri Makassar dan Surat keputusan Rektor Nomor 669/UN36/KP/2020 tentang pembentukan Jurusan Teknik Informatika dan Komputer Fakultas Teknik Universitas Negeri Makassar. Jurusan ini merupakan jurusan pertama dengan nomenklatur Jurusan Teknik Informatika dan Komputer dalam lingkungan Fakultas Teknik UNM.</p>
+            <label for="bil1" class="mt-4">Bilangan 1:</label>
+            <input type="text" id="bil1"><br><br>
 
-                   <p> Jurusan Teknik Informatika dan Komputer (JTIK) berada dalam lingkungan Fakultas Teknik bersama 6 Jurusan lainnya. Kampus JTIK FT UNM berada dalam kompleks Fakultas Teknik Universitas Negeri Makassar berlokasi di Kampus UNM Parangtambung. JTIK merupakan salah satu jurusan yang memiliki mahasiswa terbanyak dalam lingkup Fakultas Teknik UNM.</p>
-            </div>
-            <div class="col-md-6">
-                <img src="logo_jtik.png" alt="Gambar Ilustrasi" class="img-fluid">
-            </div>
+            <label for="bil2">Bilangan 2:</label>
+            <input type="text" id="bil2"><br><br>
+
+            <label for="hasil">Hasil:</label>
+            <input type="text" id="hasil" disabled>
+
+            <br><br>
+
+            <button onclick="tambah()" class="btn btn-dark">+</button>
+            <button onclick="kurang()" class="btn btn-dark">-</button>
+            <button onclick="kali()" class="btn btn-dark">x</button>
+            <button onclick="bagi()" class="btn btn-dark">/</button><br><br>
         </div>
     </div>
 
-    <br><br>
+    <script>
+        function tambah() {
+            const bil1 = parseFloat(document.getElementById("bil1").value);
+            const bil2 = parseFloat(document.getElementById("bil2").value);
+            const hasil = bil1 + bil2;
+            document.getElementById("hasil").value = hasil;
+        }
 
-    <!-- Footer -->
-    <footer class="bg-dark text-light text-center py-3">
-        <p>Hak Cipta © 2023 Muh. Syarif Hidayatullah</p>
-    </footer>
+        function kurang() {
+            const bil1 = parseFloat(document.getElementById("bil1").value);
+            const bil2 = parseFloat(document.getElementById("bil2").value);
+            const hasil = bil1 - bil2;
+            document.getElementById("hasil").value = hasil;
+        }
 
-    <!-- Script Bootstrap -->
+        function kali() {
+            const bil1 = parseFloat(document.getElementById("bil1").value);
+            const bil2 = parseFloat(document.getElementById("bil2").value);
+            const hasil = bil1 * bil2;
+            document.getElementById("hasil").value = hasil;
+        }
+
+        function bagi() {
+            const bil1 = parseFloat(document.getElementById("bil1").value);
+            const bil2 = parseFloat(document.getElementById("bil2").value);
+            if (bil2 !== 0) {
+                const hasil = bil1 / bil2;
+                document.getElementById("hasil").value = hasil;
+            } else {
+                document.getElementById("hasil").value = "Tidak bisa dibagi oleh 0";
+            }
+        }
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"> </script>
 </body>
+
 </html>
